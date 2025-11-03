@@ -1,0 +1,204 @@
+[
+    // ####################### cursor movement #################################
+    // #########################################################################
+    // basic
+    {
+        "key": "ctrl+h",
+        "command": "cursorLeft",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "ctrl+j",
+        "command": "cursorDown",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "ctrl+k",
+        "command": "cursorUp",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "ctrl+l",
+        "command": "cursorRight",
+        "when": "editorTextFocus"
+    },
+    // word (macOS)
+    {
+        "key": "ctrl+,",
+        "command": "cursorWordLeft",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "ctrl+.",
+        "command": "cursorWordRight",
+        "when": "editorTextFocus"
+    },
+    // line
+    {
+        "key": "ctrl+a",
+        "command": "cursorLineStart",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "ctrl+0",
+        "command": "cursorLineEnd",
+        "when": "editorTextFocus"
+    },
+    // paging (macOS) 
+    {
+        "key": "ctrl+p",
+        "command": "cursorPageUp",
+        "whehn": "editorTextFocus"
+    },
+    {
+        "key": "ctrl+;",
+        "command": "cursorPageDown",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "ctrl+[",
+        "command": "cursorTop",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "ctrl+'",
+        "command": "cursorBottom",
+        "when": "editorTextFocus"
+    },
+    // ####################### editing #########################################
+    // #########################################################################
+    {
+        "key": "cmd+shift+.",
+        "command": "deleteWordRight",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "cmd+shift+,",
+        "command": "deleteWordLeft",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "cmd+shift+backspace",
+        "command": "editor.action.deleteLines",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "cmd+shift+0",
+        "command": "deleteAllRight",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "cmd+shift+a",
+        "command": "deleteAllLeft",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "cmd+shift+l",
+        "command": "deleteRight",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "cmd+shift+h",
+        "command": "deleteLeft",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "cmd+shift+j",
+        "command": "editor.action.insertLineAfter",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "cmd+shift+k",
+        "command": "editor.action.insertLineBefore",
+        "when": "editorTextFocus"
+    },
+    // ####################### selection #######################################
+    // #########################################################################
+    {
+        "key": "ctrl+shift+backspace",
+        "command": "expandLineSelection",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "ctrl+shift+l",
+        "command": "cursorRightSelect",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "ctrl+shift+h",
+        "command": "cursorLeftSelect",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "ctrl+shift+j",
+        "command": "cursorDownSelect",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "ctrl+shift+k",
+        "command": "cursorUpSelect",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "ctrl+shift+a",
+        "command": "cursorLineStartSelect",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "ctrl+shift+0",
+        "command": "cursorLineEndSelect",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "ctrl+shift+,",
+        "command": "cursorWordLeftSelect",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "ctrl+shift+.",
+        "command": "cursorWordRightSelect",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "ctrl+shift+p",
+        "command": "cursorPageUpSelect",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "ctrl+shift+;",
+        "command": "cursorPageDownSelect",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "ctrl+shift+[",
+        "command": "cursorTopSelect",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "ctrl+shift+'",
+        "command": "cursorBottomSelect",
+        "when": "editorTextFocus"
+    },
+    // ####################### UI Navigation ###################################
+    // #########################################################################
+    {
+        "key": "ctrl+j",
+        "command": "quickInput.next",
+        "when": "inQuickInput"
+    },
+    {
+        "key": "ctrl+k",
+        "command": "quickInput.previous",
+        "when": "inQuickInput"
+    },
+    {
+        "key": "ctrl+j",
+        "command": "selectNextSuggestion",
+        "when": "suggestWidgetVisible"
+    },
+    {
+        "key": "ctrl+k",
+        "command": "selectPrevSuggestion",
+        "when": "suggestWidgetVisible"
+    }
+]
