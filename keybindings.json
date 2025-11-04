@@ -22,7 +22,7 @@
         "command": "cursorRight",
         "when": "editorTextFocus"
     },
-    // word (macOS)
+    // word
     {
         "key": "ctrl+,",
         "command": "cursorWordLeft",
@@ -44,11 +44,11 @@
         "command": "cursorLineEnd",
         "when": "editorTextFocus"
     },
-    // paging (macOS) 
+    // paging
     {
         "key": "ctrl+p",
         "command": "cursorPageUp",
-        "whehn": "editorTextFocus"
+        "when": "editorTextFocus"
     },
     {
         "key": "ctrl+;",
@@ -65,52 +65,99 @@
         "command": "cursorBottom",
         "when": "editorTextFocus"
     },
-    // ####################### editing #########################################
+    // ####################### editing (macOS) #################################
     // #########################################################################
     {
         "key": "cmd+shift+.",
         "command": "deleteWordRight",
-        "when": "editorTextFocus"
+        "when": "isMac && editorTextFocus"
     },
     {
         "key": "cmd+shift+,",
         "command": "deleteWordLeft",
-        "when": "editorTextFocus"
+        "when": "isMac && editorTextFocus"
     },
     {
         "key": "cmd+shift+backspace",
         "command": "editor.action.deleteLines",
-        "when": "editorTextFocus"
+        "when": "isMac && editorTextFocus"
     },
     {
         "key": "cmd+shift+0",
         "command": "deleteAllRight",
-        "when": "editorTextFocus"
+        "when": "isMac && editorTextFocus"
     },
     {
         "key": "cmd+shift+a",
         "command": "deleteAllLeft",
-        "when": "editorTextFocus"
+        "when": "isMac && editorTextFocus"
     },
     {
         "key": "cmd+shift+l",
         "command": "deleteRight",
-        "when": "editorTextFocus"
+        "when": "isMac && editorTextFocus"
     },
     {
         "key": "cmd+shift+h",
         "command": "deleteLeft",
-        "when": "editorTextFocus"
+        "when": "isMac && editorTextFocus"
     },
     {
         "key": "cmd+shift+j",
         "command": "editor.action.insertLineAfter",
-        "when": "editorTextFocus"
+        "when": "isMac && editorTextFocus"
     },
     {
         "key": "cmd+shift+k",
         "command": "editor.action.insertLineBefore",
-        "when": "editorTextFocus"
+        "when": "isMac && editorTextFocus"
+    },
+    // ####################### editing (linux/windows) #########################
+    // #########################################################################
+    {
+        "key": "alt+shift+.",
+        "command": "deleteWordRight",
+        "when": "(isLinux || isWindows) && editorTextFocus"
+    },
+    {
+        "key": "alt+shift+,",
+        "command": "deleteWordLeft",
+        "when": "(isLinux || isWindows) && editorTextFocus"
+    },
+    {
+        "key": "alt+shift+backspace",
+        "command": "editor.action.deleteLines",
+        "when": "(isLinux || isWindows) && editorTextFocus"
+    },
+    {
+        "key": "alt+shift+0",
+        "command": "deleteAllRight",
+        "when": "(isLinux || isWindows) && editorTextFocus"
+    },
+    {
+        "key": "alt+shift+a",
+        "command": "deleteAllLeft",
+        "when": "(isLinux || isWindows) && editorTextFocus"
+    },
+    {
+        "key": "alt+shift+l",
+        "command": "deleteRight",
+        "when": "(isLinux || isWindows) && editorTextFocus"
+    },
+    {
+        "key": "alt+shift+h",
+        "command": "deleteLeft",
+        "when": "(isLinux || isWindows) && editorTextFocus"
+    },
+    {
+        "key": "alt+shift+j",
+        "command": "editor.action.insertLineAfter",
+        "when": "(isLinux || isWindows) && editorTextFocus"
+    },
+    {
+        "key": "alt+shift+k",
+        "command": "editor.action.insertLineBefore",
+        "when": "(isLinux || isWindows) && editorTextFocus"
     },
     // ####################### selection #######################################
     // #########################################################################
@@ -179,6 +226,11 @@
         "command": "cursorBottomSelect",
         "when": "editorTextFocus"
     },
+    {
+        "key": "ctrl+shift+space",
+        "command": "editor.action.selectAll",
+        "when": "(isLinux || isWindows) && editorTextFocus"
+    },
     // ####################### UI Navigation ###################################
     // #########################################################################
     {
@@ -200,5 +252,32 @@
         "key": "ctrl+k",
         "command": "selectPrevSuggestion",
         "when": "suggestWidgetVisible"
+    },
+    // ####################### UI Actions (Linux/Windows) ######################
+    // #########################################################################
+    {
+        "key": "alt+b",
+        "command": "workbench.action.toggleSidebarVisibility",
+        "when": "(isLinux || isWindows)"
+    },
+    {
+        "key": "alt+j",
+        "command": "workbench.action.togglePanel",
+        "when": "(isLinux || isWindows)"
+    },
+    {
+        "key": "alt+ctrl+b",
+        "command": "-workbench.action.toggleStatusbarVisibility",
+        "when": "(isLinux || isWindows)"
+    },
+    {
+        "key": "alt+p",
+        "command": "workbench.action.quickOpen",
+        "when": "(isLinux || isWindows)"
+    },
+    {
+        "key": "alt+shift+p",
+        "command": "workbench.action.showCommands",
+        "when": "(isLinux || isWindows)"
     }
 ]
